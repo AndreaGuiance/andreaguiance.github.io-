@@ -1,0 +1,75 @@
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	background-color: whitesmoke; 
+}
+
+.redes{
+    background-color: beige;
+    width: 30%;
+    height: 5%;}
+
+.contenido{
+    background-color: red;
+    object-position: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.nombre{
+    background-color: papayawhip;
+    width: 30%;
+    margin: auto;
+
+}
+
+.nombre h1{
+    white-space: nowrap;   
+    border: solid black 2px;
+
+}
+
+
+h1{
+    color: black;
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    font-size: 250%;
+}
+
+.about-me{
+    background-color: thistle;
+    object-position: center;
+    width: 50%;
+    margin: auto;
+}
+
+.comenzar-boton{
+    
+    width: 30%;
+    margin: auto;    
+    
+}
+
+a:link, a:visited {
+    background-color: darkgrey;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: yellow;
+}
+    
+
+
