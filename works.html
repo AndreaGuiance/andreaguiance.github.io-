@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+	<title>Pagina Trabajos</title>
+	<link rel="stylesheet" href="css/works.css">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">    
+    
+    <style>
+		@import url('https://fonts.googleapis.com/css?family=Parisienne');
+    </style>
+</head>
+    
+    
+<body>  
+    
+<div id="header">
+       <div class="container clearfix">
+            <div id="logo-area">
+                <a href="index.html">
+                    <img src="img/Ag.png" alt="Andrea Guiance" id="logo">
+                </a>
+            </div>
+		</div>
+</div>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Todo</button>
+  <button class="btn" onclick="filterSelection('modelado')"> Modelado</button>
+  <button class="btn" onclick="filterSelection('animacion')"> Animación</button>
+  <button class="btn" onclick="filterSelection('fotografia')"> Fotografía</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+	<!-- Columna Modelado -->
+  <div class="column modelado">
+    <div class="content">
+      <img src="img/flor1.jpg" alt="Modelado" style="width:100%">
+      <h4>Cuadro1</h4>
+      <p>Flor1</p>
+    </div>
+  </div>
+  <div class="column modelado">
+    <div class="content">
+    <img src="img/flor2.jpg" alt="Modelado" style="width:100%">
+      <h4>Cuadro2</h4>
+      <p>Flor2</p>
+    </div>
+  </div>
+  <div class="column modelado">
+    <div class="content">
+    <img src="img/flor3.jpg" alt="Modelado" style="width:100%">
+      <h4>Cuadro3</h4>
+      <p>Flor3</p>
+    </div>
+  </div>
+  <!-- Columna Animacion -->
+  <div class="column animacion">
+    <div class="content">
+      <img src="img/dibujo1.jpg" alt="Animacion" style="width:100%">
+      <h4>Cuadro1</h4>
+      <p>Dibujo1.</p>
+    </div>
+  </div>
+  <div class="column animacion">
+    <div class="content">
+    <img src="img/dibujo2.jpg" alt="Animación" style="width:100%">
+      <h4>Cuadro2</h4>
+      <p>Dibujo2.</p>
+    </div>
+  </div>
+  <div class="column animacion">
+    <div class="content">
+    <img src="img/dibujo3.jpg" alt="Animación" style="width:100%">
+      <h4>Cuadro3</h4>
+      <p>Dibujo3</p>
+    </div>
+  </div>
+	<!-- Columna Fotografia -->
+  <div class="column fotografia">
+    <div class="content">
+      <img src="img/foto1.jpg" alt="Fotografía" style="width:100%">
+      <h4>Cuadro1</h4>
+      <p>Foto1.</p>
+    </div>
+  </div>
+  <div class="column fotografia">
+    <div class="content">
+    <img src="img/foto2.jpg" alt="Fotografía" style="width:100%">
+      <h4>Cuadro2</h4>
+      <p>Foto2.</p>
+    </div>
+  </div>
+  <div class="column fotografia">
+    <div class="content">
+    <img src="img/foto3.jpg" alt="Fotografía" style="width:100%">
+      <h4>Cuadro3</h4>
+      <p>Foto3.</p>
+    </div>
+  </div>
+  
+</div>
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+</body>
+</html> 
+	
+
